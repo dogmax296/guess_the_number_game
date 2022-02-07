@@ -1,5 +1,7 @@
 package guess_the_number.component;
 
+import java.util.Random;
+
 /**
  * @author dogmax296
  * @link https://github.com/dogmax296
@@ -7,6 +9,7 @@ package guess_the_number.component;
 public class GuessGenerator implements Input {
     @Override
     public int guess() {
-        return 0;
+        Random random =  new Random();
+        return random.nextInt(10);
     }
 }
