@@ -7,13 +7,14 @@ import guess_the_number.component.DataPrinter;
  * @link https://github.com/dogmax296
  */
 public class ConsoleDataPrinter implements DataPrinter {
-    @Override
-    public void printInstructions() {
 
+    @Override
+    public void printInfoMessage(final String string) {
+        System.out.println(string);
     }
 
     @Override
-    public void printInfoMessage(final String s) {
-
+    public void printInstructions() {
+        printInfoMessage("Please type a number between 0 and 9:");
     }
 }
