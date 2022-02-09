@@ -25,7 +25,7 @@ if [ -z ${JAVA_CMD+x} ]; then
   echo "------------------------------------------------------------------------" >&2
   RETURN_CODE=1
 else
-  # Run tic-tac-toe game:
+  # Run guess the number game:
   $JAVA_CMD -jar ${project.build.finalName}-release.jar "$@"
   RETURN_CODE=0
 fi

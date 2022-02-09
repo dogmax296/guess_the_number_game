@@ -79,7 +79,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>tictactoe.Launcher</mainClass>
+                                <mainClass>guess_the_number.Launcher</mainClass>
                             </manifest>
                         </archive>
                     </configuration>
