@@ -27,7 +27,6 @@ public class Game {
                 dataPrinter.printInfoMessage("number < " + userNumber + ". Try again:");
             } else {
                 dataPrinter.printInfoMessage("Congratulations, you guessed the number!");
-                gameOverHandler.gameOver();
                 break;
             }
         }
