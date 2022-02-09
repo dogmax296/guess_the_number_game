@@ -9,6 +9,11 @@ import guess_the_number.component.DataPrinter;
 public class ConsoleDataPrinter implements DataPrinter {
 
     @Override
+    public void printErrorMessage(final String string) {
+        System.err.println(string);
+    }
+
+    @Override
     public void printInfoMessage(final String string) {
         System.out.println(string);
     }

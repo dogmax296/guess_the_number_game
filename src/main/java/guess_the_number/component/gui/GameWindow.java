@@ -90,6 +90,11 @@ public final class GameWindow extends JFrame implements DataPrinter, Input, Game
     }
 
     @Override
+    public void printErrorMessage(final String message) {
+        JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    @Override
     public int guess() {
         synchronized (this) {
             try {

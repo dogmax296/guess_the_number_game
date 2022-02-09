@@ -8,4 +8,6 @@ public interface DataPrinter {
     void printInstructions();
 
     void printInfoMessage(String s);
+
+    void printErrorMessage(String s);
 }
