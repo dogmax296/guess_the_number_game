@@ -1,14 +1,64 @@
-# The ${project.name} Project
+# Guess The Number Project
 
 -----------------------------------------------------------------------------------
 
-## Build instructions
+## Without JRE
 
-TODO
+### Build instructions
 
-## Run instructions
+- Build distributions using maven tool:
 
-TODO
+```bash
+mvn -P without-jre clean package
+```
+
+- Use the following archives:
+    - `target/guess_the_number-${project.version}-windows.zip` for Windows
+    - `target/guess_the_number-${project.version}-unix.tar.gz` for MacOS or Linux
+
+### Run instructions
+
+- Download [OpenJDK 11](https://jdk.java.net/11/);
+- Unzip the downloaded OpenJDK archive;
+- Configure the `PATH` environment variable:
+    - Add `%JDK_HOME%\bin\` directory for Windows;
+    - Add `$JDK_HOME/bin/` directory for MacOS and Linux;
+- Re-login or restart computer;
+- Unzip the Tic tac toe distribution:
+    - Unzip `guess_the_number-${project.version}-windows.zip` for Windows;
+    - Unzip `guess_the_number-${project.version}-unix.tar.gz` for MacOS or Linux;
+- Go to unzipped directory;
+- Run the game by double-click on the start script:
+    - `start.cmd` for Windows;
+    - `start.sh` for MacOS or Linux;
+
+-----------------------------------------------------------------------------------
+
+## With JRE
+
+### Build instructions
+
+- Build distributions using maven tool:
+
+```bash
+mvn -P with-jre clean package
+```
+
+- Use the following archives:
+    - `target/guess_the_number-${project.version}-windows-with-jre.zip` for Windows
+    - `target/guess_the_number-${project.version}-macos-with-jre.tar.gz` for MacOS
+    - `target/guess_the_number-${project.version}-linux-with-jre.tar.gz` for Linux
+
+### Run instructions
+
+- Unzip the Tic tac toe distribution:
+    - Unzip `guess_the_number-${project.version}-windows-with-jre.zip` for Windows;
+    - Unzip `guess_the_number-${project.version}-macos-with-jre.tar.gz` for MacOS;
+    - Unzip `guess_the_number-${project.version}-linux-with-jre.tar.gz` for Linux;
+- Go to unzipped directory;
+- Run the game by double-click on the start script:
+    - `start.cmd` for Windows;
+    - `start.sh` for MacOS or Linux;
 
 -----------------------------------------------------------------------------------
 
