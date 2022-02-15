@@ -1,9 +1,6 @@
-package guess_the_number.component.сonfig;
+package guess.number.component.сonfig;
 
-import guess_the_number.model.config.UserInterface;
-
-import static guess_the_number.model.config.UserInterface.CONSOLE;
-import static guess_the_number.model.config.UserInterface.GUI;
+import guess.number.model.config.UserInterface;
 
 /**
  * @author dogmax296
@@ -21,7 +18,7 @@ public class CommandLineArgumentParser {
         UserInterface userInterface = null;
 
         for (final String arg : args) {
-            if (CONSOLE.name().equalsIgnoreCase(arg) || GUI.name().equalsIgnoreCase(arg)) {
+            if (UserInterface.CONSOLE.name().equalsIgnoreCase(arg) || UserInterface.GUI.name().equalsIgnoreCase(arg)) {
                 if (userInterface == null) {
                     userInterface = UserInterface.valueOf(arg.toUpperCase());
                 }
@@ -33,7 +30,7 @@ public class CommandLineArgumentParser {
         }
 
         if(userInterface == null){
-            userInterface = CONSOLE;
+            userInterface = UserInterface.CONSOLE;
         }
 
         return new CommandLineArguments(userInterface);

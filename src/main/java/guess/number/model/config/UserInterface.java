@@ -1,4 +1,4 @@
-package guess_the_number.model.config;
+package guess.number.model.config;
 
 /**
  * @author dogmax296

@@ -1,4 +1,4 @@
-package guess_the_number;
+package guess.number;
 
 import guess.number.component.*;
 import guess.number.component.console.ConsoleDataPrinter;

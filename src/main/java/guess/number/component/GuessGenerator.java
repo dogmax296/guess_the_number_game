@@ -1,4 +1,4 @@
-package guess_the_number.component;
+package guess.number.component;
 
 import java.util.Random;
 
@@ -9,7 +9,6 @@ import java.util.Random;
 public class GuessGenerator implements Input {
     @Override
     public int guess() {
-        Random random =  new Random();
-        return random.nextInt(10);
+        return new Random().nextInt(10);
     }
 }

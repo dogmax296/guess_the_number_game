@@ -1,7 +1,7 @@
-package guess_the_number.component.console;
+package guess.number.component.console;
 
-import guess_the_number.component.DataPrinter;
-import guess_the_number.component.GameOverHandler;
+import guess.number.component.DataPrinter;
+import guess.number.component.GameOverHandler;
 
 /**
  * @author dogmax296

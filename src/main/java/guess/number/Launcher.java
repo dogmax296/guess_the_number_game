@@ -1,6 +1,6 @@
-package guess_the_number;
+package guess.number;
 
-import guess_the_number.component.Game;
+import guess.number.component.Game;
 
 /**
  * @author dogmax296

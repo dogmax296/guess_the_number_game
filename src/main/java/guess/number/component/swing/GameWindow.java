@@ -1,11 +1,12 @@
-package guess_the_number.component.gui;
+package guess.number.component.swing;
 /*
  * @author dogmax296
  * @link https://github.com/dogmax296
  */
-import guess_the_number.component.DataPrinter;
-import guess_the_number.component.GameOverHandler;
-import guess_the_number.component.Input;
+
+import guess.number.component.DataPrinter;
+import guess.number.component.GameOverHandler;
+import guess.number.component.Input;
 
 import java.awt.Color;
 import java.awt.Dimension;

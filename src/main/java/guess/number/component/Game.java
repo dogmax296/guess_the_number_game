@@ -1,4 +1,4 @@
-package guess_the_number.component;
+package guess.number.component;
 
 /**
  * @author dogmax296
