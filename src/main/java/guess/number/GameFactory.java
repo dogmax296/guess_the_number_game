@@ -1,18 +1,15 @@
 package guess_the_number;
 
-import guess_the_number.component.DataPrinter;
-import guess_the_number.component.Game;
-import guess_the_number.component.GameOverHandler;
-import guess_the_number.component.Input;
-import guess_the_number.component.console.ConsoleDataPrinter;
-import guess_the_number.component.console.ConsoleGameOverHandler;
-import guess_the_number.component.console.ConsoleUserInput;
-import guess_the_number.component.gui.GameWindow;
-import guess_the_number.component.сonfig.CommandLineArgumentParser;
-import guess_the_number.model.config.UserInterface;
+import guess.number.component.*;
+import guess.number.component.console.ConsoleDataPrinter;
+import guess.number.component.console.ConsoleGameOverHandler;
+import guess.number.component.console.ConsoleUserInput;
+import guess.number.component.swing.GameWindow;
+import guess.number.component.сonfig.CommandLineArgumentParser;
+import guess.number.model.config.UserInterface;
 
-import static guess_the_number.component.сonfig.CommandLineArgumentParser.*;
-import static guess_the_number.model.config.UserInterface.GUI;
+import static guess.number.component.сonfig.CommandLineArgumentParser.CommandLineArguments;
+import static guess.number.model.config.UserInterface.GUI;
 
 /**
  * @author dogmax296
@@ -26,12 +23,13 @@ public class GameFactory {
         this.userInterface = commandLineArguments.getUserInterface();
     }
 
-    public Game create(){
+    public Game create() {
         final DataPrinter dataPrinter;
+        final Input computerInput = new GuessGenerator();
         final Input userInput;
         final GameOverHandler gameOverHandler;
 
-        if(userInterface == GUI){
+        if (userInterface == GUI) {
             final GameWindow gameWindow = new GameWindow();
             dataPrinter = gameWindow;
             userInput = gameWindow;
@@ -44,6 +42,7 @@ public class GameFactory {
 
         return new Game(
                 dataPrinter,
+                computerInput,
                 userInput,
                 gameOverHandler
         );
